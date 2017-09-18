@@ -1,0 +1,39 @@
+main
+	+container-fluid()
+	// display: flex
+	// flex-direction: column
+
+
+.descr
+	// display: flex
+	// justify-content: center
+	// margin: 0 auto
+
+	&__wrapper
+		display: flex
+		flex-direction: column
+		padding: 0 32px
+		padding-top: 40px
+
+
+	&__header
+		font-size: 18px
+		text-align: center
+
+	&__p
+		font-size: 14px
+		font-weight: 400
+		color: #333333
+		text-align: center
+
+
+@media (min-width: $tablet-widths)
+	.descr
+		margin-bottom: 55px
+
+		&__wrapper
+			padding-top: 50px
+			flex-basis: 500px
+
+		&__header
+			font-size: 21px

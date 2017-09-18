@@ -1,0 +1,64 @@
+.feature
+    display: flex
+    flex-direction: column
+    padding-top: 15px
+    padding-right: 40px
+    padding-bottom: 25px
+
+.feature-item
+    display: flex
+
+    &__wrapper
+        text-align: center
+
+
+    &__header
+        font-size: 18px
+        line-height: 26px
+
+    &__p
+        font-size: 14px
+        line-height: 21px
+        font-weight: 400
+        color: #333333
+
+@media (max-width: $mobile-widths-only)
+    .feature-item
+
+        &__wrapper
+            flex-basis: 25%
+
+        &__img
+            margin-top: 10px
+
+        &__descr
+            flex-basis: 80%
+
+@media (min-width: $tablet-widths)
+    .feature
+        flex-direction: row
+        justify-content: space-around
+
+    .feature-item
+        flex-basis: 180px
+        flex-direction: column
+
+        &__wrapper
+            margin-top: 60px
+
+        &__img
+            width: 75px
+            height: 75px
+
+        &__descr
+            text-align: center
+
+        &__header
+            font-size: 21px
+
+    .feature-item:nth-child(2)
+        order: 1
+
+@media (min-width: $desktop-widths)
+    .feature-item
+        flex-basis: 270px

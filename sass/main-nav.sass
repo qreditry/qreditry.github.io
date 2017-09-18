@@ -1,0 +1,128 @@
+.main-nav
+    // min-height: 56px
+
+    &__items
+        display: flex
+        flex-direction: column
+
+    &__item
+        text-align: center
+        flex-basis: 25%
+
+        &--logo
+            height: 56px
+            position: relative
+
+    &__item a
+        display: block
+        padding: 15px 0
+        background-color: $lightblue
+        border-top: 1px solid #98c1da
+        border-bottom: 1px solid #6590a7
+
+
+
+
+@media (max-width: $mobile-widths-only)
+    .main-nav__item--logo
+        min-height: 56px
+
+    .main-nav__item--logo a
+        position: absolute
+        right: 50%
+        margin-right: -51px
+        width: 102px
+        padding: 0
+        border: none
+        background: none
+
+    .main-nav__toggle
+        position: absolute
+        display: block
+        width: 63px
+        height: 56px
+        top: 0
+        right: 0
+        z-index: 2
+
+        font-size: 0
+        cursor: pointer
+
+        border: none
+
+    .main-nav--closed .main-nav__item:not(:last-child)
+        display: none
+
+
+    .main-nav--closed .main-nav__toggle
+        background-color: #ffffff
+        &::after
+            position: absolute
+            content: ""
+            width: 23px
+            height: 4px
+            top: 17px
+            right: 20px
+            background-color: $lightblue
+            box-shadow: 0 8px 0 0 $lightblue, 0 16px 0 0 $lightblue
+
+    .main-nav--opened .main-nav__toggle
+        background-color: $lightblue
+        &::after,
+        &::before
+            position: absolute
+            content: ""
+            width: 32px
+            height: 4px
+            top: 25px
+            right: 15px
+            background-color: #ffffff
+
+        &::before
+            transform: rotate(45deg)
+
+        &::after
+            transform: rotate(-45deg)
+
+    .main-nav--no-js .main-nav__toggle
+        display: none
+
+
+
+@media (min-width: $tablet-widths)
+    .main-nav__toggle
+        display: none
+
+    .main-nav__items
+        flex-direction: row
+        justify-content: space-between
+
+    .main-nav__item
+
+        &:nth-child(3),
+        &:nth-child(4)
+            order: 2
+
+    .main-nav__item a
+        font-size: 14px
+        line-height: 26px
+        background-color: #ffffff
+        color: #000000
+        border: none
+
+    .main-nav__item--logo a
+        padding: 0
+        order: 1
+        background: none
+
+@media (min-width: $desktop-widths)
+
+    .main-nav__item a
+        &:hover
+            color: #81b3d2
+        &:active
+            opacity: 0.3
+
+    .main-nav__item--logo img
+        width: 188px
+        height: auto

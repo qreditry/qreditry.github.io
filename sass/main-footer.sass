@@ -1,0 +1,51 @@
+.main-footer
+    +container-fluid()
+
+    margin: 0 auto
+    padding-top: 30px
+    display: flex
+    flex-direction: column
+    text-align: center
+
+    &__visit
+        font-size: 21px
+        line-height: 26px
+        margin-bottom: 35px
+
+    &__develop
+        font-size: 14px
+        line-height: 26px
+        font-weight: 400
+        margin-bottom: 30px
+
+    &__wrapper
+        display: flex
+        justify-content: space-around
+
+
+.social
+    display: flex
+    width: 160px
+    justify-content: space-between
+    margin-bottom: 45px
+
+    &__icon
+        width: 46px
+        height: 46px
+        box-sizing: border-box
+        padding-top: 11px
+        background-color: $lightblue
+
+@media (max-width: $mobile-widths-only)
+    .main-footer
+        width: 160px
+
+
+@media (min-width: $tablet-widths)
+    .main-footer
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+
+        &__wrapper
+            flex-basis: 160px
