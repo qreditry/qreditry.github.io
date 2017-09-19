@@ -3,7 +3,7 @@
 
     &__background
         width: 100%
-        height: 390px
+        height: 389px
         position: relative
         background-color: #ffffff
         background-image: url("../img/triangle.png"), url("../img/background.jpg")
@@ -17,6 +17,15 @@
         left: 50%
         transform: translateX(-50%)
 
+.page-header--photo .page-header__background
+    width: auto
+    height: 158px
+    background-position: 50% 100%
+
+.page-header--photo .page-header__text-index
+    top: 50px
+
+
 // @media (max-width: $mobile-widths-only)
 
 
@@ -26,3 +35,9 @@
 
     .page-header__text-index
         width: 460px
+
+    .page-header--photo .page-header__background
+        height: 290px
+
+    .page-header--photo .page-header__text-index
+        top: 100px

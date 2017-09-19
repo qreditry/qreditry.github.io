@@ -5,6 +5,7 @@ main
 
 
 .descr
+
 	// display: flex
 	// justify-content: center
 	// margin: 0 auto
@@ -14,6 +15,12 @@ main
 		flex-direction: column
 		padding: 0 32px
 		padding-top: 40px
+
+	&__wrapper--photo
+		position: relative
+		padding: 0 20px
+		padding-top: 40px
+		padding-bottom: 30px
 
 
 	&__header
@@ -27,13 +34,34 @@ main
 		text-align: center
 
 
+
+@media (max-width: $mobile-widths-only)
+	.descr--photo
+		position: relative
+
+		&::after
+			position: absolute
+			content: ""
+			bottom: 0
+			width: 100%
+			height: 1px
+			background-color: #e5e5e5
+
 @media (min-width: $tablet-widths)
 	.descr
 		margin-bottom: 55px
 
 		&__wrapper
 			padding-top: 50px
-			flex-basis: 500px
+			margin: 0 auto
+			width: 500px
+			// flex-basis: 500px
+
+		&__wrapper--photo
+			width: 430px
 
 		&__header
 			font-size: 21px
+
+	.descr__wrapper--photo .descr__header
+		font-size: 30px
