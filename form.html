@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Sedona Hotels</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+    <body>
+        <header class="page-header page-header--photo">
+            <nav class="main-nav main-nav--opened main-nav--no-js">
+                <button type="button" class="main-nav__toggle">Открыть меню</button>
+                <ul class="main-nav__items">
+                    <li class="main-nav__item"><a href="index.html">Главная</a></li>
+                    <li class="main-nav__item"><a href="photo.html">ФОТО И ВИДЕО</a></li>
+                    <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+                    <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML academy</a></li>
+                    <li class="main-nav__item main-nav__item--logo">
+                        <a href="index.html">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="img/logotype-desktop.png">
+                                <img src="img/logotyle-mobile.png" alt="Sedona" width="102" height="83">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="page-header__background">
+                <img class="page-header__text-index" src="img/sedona.png" width="229" alt="Welcome">
+            </div>
+        </header>
+        <main>
+            <div class="descr descr--form">
+                <div class="descr__wrapper descr__wrapper--form">
+                    <h1 class="descr__header">Оставьте свой отзыв</h1>
+                    <p class="descr__p">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+                </div>
+            </div>
+            <form class="main-form" method="post">
+                <fieldset class="form form--name">
+                    <h2 class="form__title">Представьтесь<span class="form__title--no-tablet">, пожалуйста</span>:</h2>
+                    <div class="form__wrapper">
+                        <label class="form__label">
+                            <span class="form__span form__span--first-name">ИМЯ:</span>
+                            <input required class="form__input form__input--name" type="text" name="first-name" placeholder="Петр">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__span form__span--last-name">ФАМИЛИЯ:</span>
+                            <input required class="form__input form__input--name" type="text" name="last-name" placeholder="Иванов">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__span form__span--patronymic">Отчество:</span>
+                            <input required class="form__input form__input--name" type="text" name="patronymic" placeholder="Александрович">
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="form form--contact">
+                    <h2 class="form__title form__title--line">Контактная информация:</h2>
+                    <div class="form__wrapper">
+                        <label class="form__label form__label--contact">
+                            <span class="form__span form__span--tel">Контактный телефон:</span>
+                            <input class="form__input form__input--tel" type="tel" name="tel" placeholder="Введите телефон">
+                        </label>
+                        <label class="form__label form__label--contact">
+                            <span class="form__span form__span--mail">Электронная почта:</span>
+                            <input required class="form__input form__input--mail" type="email" name="mail" placeholder="Введите e-mail">
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="form form--impression">
+                    <h2 class="form__title">ВАше Общее впечатление:</h2>
+                    <div class="form__wrapper">
+                        <label class="form__label">
+                            <input class="form__radio" value="positive" type="radio" name="impression" checked>
+                            <i class="form__radio--check"></i>
+                            <span class="form__span form__span--radio">Скорее положительное</span>
+                        </label>
+                        <label class="form__label">
+                            <input class="form__radio" value="negative" type="radio" name="impression">
+                            <i class="form__radio--check"></i>
+                            <span class="form__span form__span--radio">Скорее отрицательное</span>
+                        </label>
+                        <label class="form__label">
+                            <input class="form__radio" value="none" type="radio" name="impression">
+                            <i class="form__radio--check"></i>
+                            <span class="form__span form__span--radio">Затрудняюсь ответить</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="form form--attractions">
+                    <h2 class="form__title form__title--line">посещенные<br>достопримечательности:</h2>
+                    <div class="form__wrapper">
+                        <label class="form__label">
+                            <input class="form__checkbox" type="checkbox" name="attractions" value="bridge">
+                            <i class="form__checkbox--check"></i>
+                            <span class="form__span form__span--checkbox">Мост Дьявола</span>
+                        </label>
+                        <label class="form__label">
+                            <input class="form__checkbox" type="checkbox" name="attractions" value="park">
+                            <i class="form__checkbox--check"></i>
+                            <span class="form__span form__span--checkbox">Слайд-парк</span>
+                        </label>
+                        <label class="form__label">
+                            <input class="form__checkbox" type="checkbox" name="attractions" value="mountain">
+                            <i class="form__checkbox--check"></i>
+                            <span class="form__span form__span--checkbox">Гора-Колокол</span>
+                        </label>
+                        <label class="form__label">
+                            <input class="form__checkbox" type="checkbox" name="attractions" value="cliffs">
+                            <i class="form__checkbox--check"></i>
+                            <span class="form__span form__span--checkbox">Красные скалы</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="form form--text">
+                    <h2 class="form__title form__title--line">Опишите свои эмоции:</h2>
+                    <div class="form__wrapper">
+                        <textarea class="form__textarea" name="text" placeholder="Опишите подробно все свои восторги "></textarea>
+                    </div>
+                </fieldset>
+                <input class="main-form__submit" type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
+            </form>
+        </main>
+        <footer class="main-footer">
+            <b class="main-footer__visit">#visitSEDONA</b>
+            <div class="social">
+                <a href="#" class="social__icon social__icon--tw"><img src="img/icon-twitter.png" alt=""></a>
+                <a href="#" class="social__icon social__icon--fb"><img src="img/icon-facebook.png" alt=""></a>
+                <a href="#" class="social__icon social__icon--yuot"><img src="img/icon-youtube.png" alt=""></a>
+            </div>
+            <div class="main-footer__wrapper">
+                <strong class="main-footer__develop">Разработано</strong>
+                <a href="" class="main-footer__develop-icon"><img src="img/htmlacademy.png" alt=""></a>
+            </div>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
+</html>

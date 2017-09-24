@@ -16,11 +16,12 @@ main
 		padding: 0 32px
 		padding-top: 40px
 
-	&__wrapper--photo
-		position: relative
+	&__wrapper--photo,
+	&__wrapper--form
+		// position: relative
 		padding: 0 20px
 		padding-top: 40px
-		padding-bottom: 30px
+		padding-bottom: 5px
 
 
 	&__header
@@ -36,7 +37,8 @@ main
 
 
 @media (max-width: $mobile-widths-only)
-	.descr--photo
+	.descr--photo,
+	.descr--form
 		position: relative
 
 		&::after
@@ -63,5 +65,6 @@ main
 		&__header
 			font-size: 21px
 
-	.descr__wrapper--photo .descr__header
+	.descr__wrapper--photo .descr__header,
+	.descr__wrapper--form .descr__header
 		font-size: 30px

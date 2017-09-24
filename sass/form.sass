@@ -1,0 +1,332 @@
+.main-form
+    display: flex
+    flex-wrap: wrap
+
+    &__submit
+        width: 90%
+        max-width: 480px
+        margin: 0 auto
+        margin-bottom: 50px
+        padding: 18px 0
+        border: none
+        background-color: #81b3d2
+        font-size: 21px
+        font-weight: 700
+        line-height: 26px
+        color: #ffffff
+
+        &:hover
+            background-color: #669ec0
+        &:active
+            background-color: #5496bd
+            color: #84b6d0
+
+
+.form
+    display: flex
+    flex-direction: column
+    border: none
+    margin: 0
+    flex-basis: 100%
+
+    &__title
+        text-align: center
+        line-height: 26px
+        font-size: 18px
+        font-weight: 700
+
+    &__label
+        position: relative
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+
+        &--contact
+            flex-direction: column
+            align-items: stretch
+            &::after
+                position: absolute
+                content: ""
+                bottom: 0
+                right: 0
+                width: 58px
+                height: 58px
+                background-color: #e5e5e5
+
+            &:last-of-type
+                &::after
+                    background-image: url("../img/mail.png")
+                    background-repeat: no-repeat
+                    background-position: center
+
+            &:first-of-type
+                &::after
+                    background-image: url("../img/phone.png")
+                    background-repeat: no-repeat
+                    background-position: center
+
+
+    &__span
+        margin-right: 20px
+        color: #333333
+        font-size: 14px
+        font-weight: 400
+        line-height: 26px
+
+        &--tel,
+        &--mail
+            margin-left: 20px
+            margin-bottom: 10px
+
+        &--radio,
+        &--checkbox
+            font-size: 18px
+            font-weight: 700
+            color: #000000
+            text-transform: none
+            margin-left: 25px
+            margin-bottom: 0
+
+
+
+    &__input
+        box-sizing: border-box
+        flex-grow: 1
+        width: 190px
+        border: none
+        background-color: #f2f2f2
+        padding: 16px 20px
+        font-weight: 700
+        font-size: 16px
+        line-height: 26px
+
+        &--tel,
+        &--mail
+            width: 100%
+            padding-right: 78px
+
+
+        &::placeholder
+            color: #000000
+
+        &:hover
+            background-color: #e5e5e5
+
+        &:focus
+            outline: 4px solid #e5e5e5
+            background-color: #ffffff
+
+    &__radio,
+    &__checkbox
+        display: none
+
+
+
+        &--check
+            position: relative
+            display: block
+            border-radius: 50%
+            width: 50px
+            height: 50px
+            background-color: #f2f2f2
+
+            &:hover
+                background-color: #e5e5e5
+
+            &:active
+                background-color: #d5d5d5
+
+
+        &:checked + .form__radio--check::before
+            transform: scale(1)
+
+        &:checked + .form__checkbox--check::before
+            transform: scale(1)
+
+    &__radio
+        &--check
+            &::before
+                content: ""
+                position: absolute
+                top: 15px
+                left: 15px
+                bottom: 15px
+                right: 15px
+                border-radius: 50%
+                background-color: #333333
+                transform: scale(0)
+                transition: 0.1s
+
+    &__checkbox
+        &--check
+            &::before
+                content: ""
+                position: absolute
+                top: 15px
+                left: 12px
+                bottom: 15px
+                right: 10px
+                background-image: url("../img/tick.png")
+                background-repeat: no-repeat
+                background-position: center
+                transform: scale(0)
+                transition: 0.1s
+
+    &__textarea
+        width: 100%
+        min-height: 160px
+        padding: 20px
+        margin-bottom: 50px
+        box-sizing: border-box
+        border: none
+        resize: none
+        background-color: #f2f2f2
+        &::placeholder
+            font-size: 18px
+            font-weight: 700
+            line-height: 26px
+            color: #000000
+
+@media (max-width: $mobile-widths-only)
+    .form
+        position: relative
+        padding: 20px
+
+    .form:not(:last-of-type)
+        &::after
+            position: absolute
+            content: ""
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 1px
+            background-color: #e5e5e5
+
+
+@media  (min-width: $tablet-widths)
+    .main-form
+        // position: relative
+        padding: 0 60px
+        justify-content: space-between
+
+    .form
+        padding: 0
+        &__title
+            font-size: 21px
+
+            &--line
+                // padding: 0 28%
+                position: relative
+
+                &::after,
+                &::before
+                    position: absolute
+                    content: ""
+                    width: 25%
+                    height: 1px
+                    background-color: #dbdbdb
+                    top: 50%
+                &::after
+                    left: 0
+                &::before
+                    right: 0
+
+            &--no-tablet
+                display: none
+
+
+    .form--name,
+    .form--impression
+        padding: 0
+        // flex-basis: 280px
+
+        .form__title
+            margin-bottom: 65px
+            text-align: left
+
+    .form--impression
+        position: relative
+        flex-basis: 49%
+        order: 1
+
+        &::before
+            position: absolute
+            content: ""
+            width: 1px
+            height: 350px
+            background-color: #dbdbdb
+            right: 0
+            top: 0
+
+    .form--name
+        flex-basis: 45%
+        max-width: 330px
+        order: 2
+        margin-bottom: 75px
+
+    .form--contact
+        margin-bottom: 50px
+        order: 3
+
+    .form--attractions
+        order: 4
+        margin-bottom: 70px
+
+        .form__title
+            margin: 0 auto
+            // width: 300px
+            margin-bottom: 50px
+
+        .form__wrapper
+            display: flex
+            justify-content: space-between
+            width: 500px
+            margin: 0 auto
+            flex-wrap: wrap
+
+        .form__label
+            flex-basis: 220px
+            margin-bottom: 40px
+
+    .form--text
+        order: 5
+
+        .form__title
+            margin-bottom: 50px
+
+    .main-form__submit
+        order: 6
+
+    .form__checkbox
+        &--check
+            border-radius: 10px
+
+    .form__radio--check
+        margin-bottom: 8px
+
+@media (min-width: $desktop-widths)
+    .main-form
+        padding: 0 120px
+
+    .form--name,
+    .form--impression
+        padding: 0
+        flex-basis: 400px
+
+    .form--impression
+        flex-basis: 50%
+        .form__title
+            text-align: center
+
+    .form--contact
+        .form__wrapper
+            display: flex
+            justify-content: space-between
+
+        .form__label
+            flex-basis: 40%
+
+    .form--attractions
+        .form__wrapper
+            width: 100%
