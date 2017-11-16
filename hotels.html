@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Sedona Hotels</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+    <body>
+        <header class="page-header page-header--photo">
+            <nav class="main-nav main-nav--opened main-nav--no-js">
+                <button type="button" class="main-nav__toggle">Открыть меню</button>
+                <ul class="main-nav__items">
+                    <li class="main-nav__item"><a href="index.html">Главная</a></li>
+                    <li class="main-nav__item"><a href="photo.html">ФОТО И ВИДЕО</a></li>
+                    <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+                    <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML academy</a></li>
+                    <li class="main-nav__item main-nav__item--logo">
+                        <a href="index.html">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="img/logotype-desktop.png">
+                                <img src="img/logotyle-mobile.png" alt="Sedona" width="102" height="83">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="page-header__background">
+                <img class="page-header__text-index" src="img/sedona.png" width="229" alt="Welcome">
+            </div>
+        </header>
+        <main>
+            <div class="descr descr--hotels">
+                <div class="descr__wrapper descr__wrapper--hotels">
+                    <h1 class="descr__header">Поиск гостиницы в седоне</h1>
+                    <p class="descr__p">Для поиска гостиницы выберите предоставленные фильтры или введите название отеля в поисковое окно</p>
+                </div>
+            </div>
+            <div class="filters">
+                <div class="filter filter--date">
+                    <label class="filter__label filter__label--date-start">
+                        <span class="filter__span filter__span--date">Дата заезда:</span>
+                        <input class="filter__input filter__input--date" type="date">
+                    </label>
+                    <label class="filter__label filter__label--date-finish">
+                        <span class="filter__span filter__span--date">Дата выезда:</span>
+                        <input class="filter__input filter__input--date" type="date">
+                    </label>
+                </div>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <b class="main-footer__visit">#visitSEDONA</b>
+            <div class="social">
+                <a href="#" class="social__icon social__icon--tw"><img src="img/icon-twitter.png" alt=""></a>
+                <a href="#" class="social__icon social__icon--fb"><img src="img/icon-facebook.png" alt=""></a>
+                <a href="#" class="social__icon social__icon--yuot"><img src="img/icon-youtube.png" alt=""></a>
+            </div>
+            <div class="main-footer__wrapper">
+                <strong class="main-footer__develop">Разработано</strong>
+                <a href="" class="main-footer__develop-icon"><img src="img/htmlacademy.png" alt=""></a>
+            </div>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
+</html>

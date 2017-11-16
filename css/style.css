@@ -797,6 +797,24 @@ main {
   .form--attractions .form__wrapper {
     width: 100%; } }
 
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .filter__input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: 190px;
+    border: none;
+    background-color: #f2f2f2;
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px; }
+
 .feature {
   display: -webkit-box;
   display: -ms-flexbox;
